@@ -15,6 +15,7 @@ export class StoreService {
       }
     }
 
-    return fetch('https://fakestoreapi.com/products')
+    return fetch('https://fakestoreapi.com/products', options)
   }
+
 }
