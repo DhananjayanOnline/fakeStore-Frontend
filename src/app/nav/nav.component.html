@@ -1,6 +1,6 @@
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#" routerLink="home">Navbar</a>
-        <a href="" [routerLink]="['/home', c]" *ngFor="let c of categories">{{c}}</a>
+        <button (click)="navigateToItem(c)" *ngFor="let c of categories" [routerLink]="['/caterory', c]">{{c}}</button>
     </div>
 </nav>
