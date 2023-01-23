@@ -1,8 +1,8 @@
 <div class="container">
-    <div class="row">
+    <div class="row mt-5">
         <div *ngFor="let p of allProducts" class="col-3">
-            <div class="card" style="width: 100%;">
-                <img src="{{p.image}}" class="card-img-top" alt="...">
+            <div class="card border-0 shadow-sm" style="width: 100%;">
+                <img src="{{p.image}}" class="card-img-top" alt="" height="200px" style="object-fit: contain;">
                 <div class="card-body">
                   <h5 class="card-title">{{p.title}}</h5>
                 </div>
