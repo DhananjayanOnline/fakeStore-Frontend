@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,6 +8,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+
+  constructor (private router:Router){}
 
   loginForm = new FormGroup({
     "username": new FormControl("", Validators.required),
@@ -24,6 +27,7 @@ export class LoginComponent {
 
   authenticate(){
     console.log(this.loginForm.value);
-    
+      
+    this.router.navigateByUrl("home")
   }
 }
