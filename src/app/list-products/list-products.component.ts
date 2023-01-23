@@ -11,8 +11,9 @@ export class ListProductsComponent implements OnInit {
   constructor(private service:StoreService){}
 
   allProducts:any
+  id:any
 
   ngOnInit(){
     this.service.displayProduct().then((res:any)=> res.json()).then(data=> this.allProducts=data).catch(err=> alert(err))
-  }  
+  }
 }
